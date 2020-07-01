@@ -1,0 +1,280 @@
+ 
+*{
+	font-family: arial;
+}
+body{
+	padding: 0;
+	margin: 0;
+}
+.header{
+	background: #111;
+	color: #fff;
+	padding:30px;
+	font-size: 30px;
+	font-weight: bold;
+	text-transform: uppercase; 
+}
+.menu{
+	padding: 10px;
+	background: #9b9b9b;
+	min-height:300px;
+
+}
+.menu a{
+	text-decoration: none;
+	color: white;
+	background:#9b9b9b;
+	padding: 10px;
+
+}
+.menu a: hover{
+	background: #F1F0E8;
+}
+.menu li{
+	text-decoration: none;
+	color: white;
+	background:#9b9b9b;
+	position: absolute;
+
+}
+.menu li ul{
+	display: none;
+	position: relative;
+	min-width: auto;
+}
+.menu li:hover > ul{
+	display: block;
+}
+
+.menu li ul li {
+	position: relative;
+}
+.menu li ul li ul{
+	left:100px;
+	top: 0px;
+	padding: 2px;
+	min-height: auto; 
+}
+
+
+.header a{
+	text-decoration: none;
+	color: white;
+	font-size: 10px;
+	float:right;
+
+
+}
+.cuerpo{
+	
+	padding: 30px;
+	min-height: 435px;
+}
+.footer{
+	background: #111;
+	color:#F1F0E8;
+	text-align: center;
+	font-size: 10px;
+	padding: 10px;
+}
+.texto{
+	text-align: justify;
+	
+}
+.texto> li{
+	text-align: center;
+	background:#111;
+	padding:10px;
+	color:white;
+}
+.producto{
+	font-family: thoma;
+	position: relative;
+}
+.producto .imagenP{
+	overflow: hidden;
+	position: relative;
+}
+.producto.imagenP:before{
+	content: "";
+	background: rgba(0,0,0,0.3);
+	width: 100%;
+	height: 100%;
+	opacity: 0;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	transition: all 0.4s ease-out 0s;
+
+}
+.producto:hover .imagenP:before{
+	opacity: 1;
+}
+.producto .imagenP{
+	display: block;
+}
+.producto .imagenP img{
+	width: 100%;
+	height: 100%;
+}
+.producto .item1{
+	opacity: 1;
+	backface-visibility: hidden;
+	transition: all 0.4s ease-out 0s;
+}
+.producto .productosT{
+	content: "";
+	color:white;
+	background-color: red;
+	font-size: 12px;
+	line-height: 28px;
+	font-weight: 700;
+	text-align: center;
+	text-transform: uppercase;
+	padding:0 7px;
+	position: absolute;
+	top: 12px
+	left:12px;
+	z-index: 3;
+}
+.producto .social{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	transform: translateY(-50%);
+	position: absolute;
+	top: 50%;
+	left: 10px;
+	z-index: 4;
+}
+.zoom{
+	transition: transform.5s;
+
+}
+
+
+.zoom:hover{
+	transform: scale(1.5);
+}
+.prese{
+	float: right;
+}
+.boton{
+	background-color: green;
+	color:white;
+
+}
+.remove{
+	background-color: red;
+	color: white;
+}
+h1{
+    width: 3%;
+    position: relative;
+    top: 25px;
+    left: 40px;
+    bottom: 60px;
+    cursor: pointer;
+
+}
+h1:before{
+    content: attr(data-count);
+    position: absolute;
+    color: white;
+    right: 16px;
+    font-size: 15px;
+    text-align: center;
+    top: -12px;
+    width: 20px;
+    height: 20px;
+    background: red;
+    border-radius: 50%;
+    opacity: 0;
+
+}
+h1.zero:before{
+    opacity: 1;
+}
+section{ 
+	width: 90%;
+	height: 400px;
+	display: flex;
+	justify-content: space-around;
+	margin: 100px auto;
+}
+section.producto{
+    background:#f5f5f5;
+    padding: 1%;
+    position: relative;
+}
+.buttoncar{
+	padding: 5px;
+	background: red;
+	outline: none;
+	font-weight: bold;
+	color: #fafafa;
+	cursor: pointer;
+}
+section.producto span{
+      position: absolute;
+      top: 14px;
+      left: 13px;
+      width: 300px;
+      height: 185px;
+      display: none;
+    }
+section.producto span{
+      width: 100%;
+      height: 100%;
+
+    }
+.select{
+      width: 70%;
+      height: 580px;
+      background:#222;
+      position: absolute;
+      top: -1000px;
+      left: 20%;
+      transition: 0.5s;
+      overflow-y: auto;;
+      margin: auto;
+
+    }
+.select.display{
+      top: 10px;
+    }
+.select.producto{
+      width: 100%;
+      height: 200px;
+      display: flex;
+      padding: 5px;
+      border: 1px solid white;
+      position: relative;
+      margin: 5px auto;
+    }
+.select.producto img{
+      width: 300px;
+      height: 100%;
+    }
+.select.producto.titulo{
+      padding: 35px;
+      color: white;
+    }
+.select.producto.titulo,
+.select.producto.buttoncar{
+      position: absolute;
+      left: 45%;
+      top: 50%;
+      color: white;
+    }
+.select.producto.buttoncar{
+      left: 60%;
+      top: 55%;
+    }
+.select.producto span{
+      display: none;
+    }
+.select.bot{
+	background:#111;
+	padding:5px;
+}
