@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, user-scalable=no,initial-scalable=1, maximum-scale=1,minimum-scale=1">
+	<link rel="stylesheet" type="text/css" href="Styles/styles.css">
+	<script type="text/javascript" src="scripts/registro.js"></script>
+
+	<title>Formulario de Registro</title>
+</head>
+<body>
+	
+    <center><div id="article">
+		
+		<form action="" id="form">
+
+	  		<h2><center>Registro de datos</center></h2>
+	  		<label>Nombres: </label>
+	  		<input type="text" name="itxt_nombre" id="itxt_nombre"><br><br>
+	  		<label>Apellidos: </label>
+	  		<input type="text" name="itxt_apellido" id="itxt_apellido"><br><br>
+	  		<label>¿Usted es mayor de edad? </label>
+	  		<input type="radio" name="pregunta_edad" id="edad_mayor" value="si">Si
+	  		<input type="radio" name="pregunta_edad" id="edad_menor" value="no">No <br><br>
+
+	  		  <script>
+	  		  	function prueba(){
+	  		  		var radio = document.getElementByName("pregunta_edad");
+	  		  		var valueInputName = document.getElementById("itxt_nombre").value;
+	  		  		alert(valueInputName);
+
+	  		  		for(var i=0; i<radio.length; i++){
+	  		  			alert("el valor del radio"+radio[i].value+"seleccionado es "+radio[i].checked);
+	  		  		}
+	  		  	}
+
+	  		  	function prueba(){
+	  		  		var radio = document.getElementByName("pregunta_edad");
+	  		  		if(radio[0].checked){
+	  		  			alert("Puede continuar con el registro");
+	  		  		}else{
+	  		  			alert("No puede continuar con el registro");
+	  		  		}
+	  		  	}
+
+	  		  </script>
+	  		<label>Documento: </label>
+	  		<input type="text" name="itxt_numeroD" id="itxt_numeroD"><br><br>
+	  		<label>Télefono: </label>
+	  		<input type="numero" name="itxt_telefono" id="itxt_telefono"><br><br>
+	  		<label>Ciudad: </label>
+	  		<input type="text" name="itxt_ciudad" id="itxt_ciudad"><br><br>
+	  		<label>Dirección: </label>
+	  		<input type="text" name="itxt_direccion" id="itxt_direccion"><br><br>
+	  		<label>Email: </label>
+	  		<input type="email" name="itxt_email" id="itxt_email"><br><br>
+	  		<label>Usuario: </label>
+	  		<input type="text" name="itxt_usuario" id="itxt_usuario"><br><br>
+	  		<label>Contraseña: </label>
+	  		<input type="password" name="itxt_contraseña" id="itxt_contraseña"><br><br>
+	  		<center><button type="button" onclick="datos()">Registrar</button></center>
+
+ 	</form></center>
+	  	
+
+</div>
+</div>
+
+	 	
+
+</body>
+</html>
